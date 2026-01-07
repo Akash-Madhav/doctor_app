@@ -22,10 +22,15 @@
       <div class="login-actions">
         <a href="#" class="forgot-password">Forgot Password?</a>
       </div>
+      <div class="signup-link" style="margin-top:8px; text-align:center;">
+        <a routerLink="/signup">Don't have an account? Sign up</a>
+      </div>
       <div *ngIf="loginError" class="error-message">
         {{ loginError }}
       </div>
-      <button type="submit" class="login-button" [disabled]="loginForm.invalid">Login</button>
+      <button type="submit" class="login-button" [disabled]="loginForm.invalid || isLoading">
+        {{ isLoading ? 'Logging in...' : 'Login' }}
+      </button>
     </form>
   </div>
 </div>

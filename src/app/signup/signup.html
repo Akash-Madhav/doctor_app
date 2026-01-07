@@ -1,0 +1,37 @@
+<div class="signup-container">
+  <div class="signup-card">
+    <div class="signup-header">
+      <h2>Create Account</h2>
+      <p>Register as a doctor to access the dashboard.</p>
+    </div>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+      <div class="input-group">
+        <label for="fullName">Full name</label>
+        <input id="fullName" formControlName="fullName" placeholder="Your full name" />
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" placeholder="you@example.com" />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input id="password" formControlName="password" type="password" placeholder="Password" />
+      </div>
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Confirm password" />
+      </div>
+      <div *ngIf="signupError" class="error-message">
+        {{ signupError }}
+      </div>
+      <div class="signup-actions">
+        <button type="submit" [disabled]="signupForm.invalid || isLoading">
+          {{ isLoading ? 'Creating account...' : 'Sign up' }}
+        </button>
+      </div>
+      <div class="signup-footer">
+        <a routerLink="/login">Already have an account? Log in</a>
+      </div>
+    </form>
+  </div>
+</div>

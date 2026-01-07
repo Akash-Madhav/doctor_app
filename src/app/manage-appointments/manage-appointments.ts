@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-manage-appointments',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './manage-appointments.html',
   styleUrl: './manage-appointments.css',
 })

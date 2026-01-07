@@ -1,0 +1,8 @@
+.signup-container { display:flex; align-items:center; justify-content:center; height:100%; }
+.signup-card { width: 360px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background:#fff; }
+.signup-header h2 { margin: 0 0 8px; }
+.input-group { margin-bottom: 12px; }
+.input-group input { width:100%; padding:8px; box-sizing:border-box; }
+.signup-actions { text-align:right; }
+.signup-actions button { padding:8px 16px; }
+.signup-footer { margin-top:12px; text-align:center; }

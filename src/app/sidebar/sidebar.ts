@@ -4,6 +4,7 @@ import { AuthService } from '../auth';
 
 @Component({
   selector: 'app-sidebar',
+  standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
@@ -11,7 +12,7 @@ import { AuthService } from '../auth';
 export class SidebarComponent {
   authService = inject(AuthService);
 
-  logout() {
-    this.authService.logout();
+  async logout() {
+    await this.authService.logout();
   }
 }
