@@ -1,0 +1,21 @@
+<div class="records-container">
+  <h2>Patient Records</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Medical History</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients$ | async">
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.gender }}</td>
+        <td>{{ patient.history }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

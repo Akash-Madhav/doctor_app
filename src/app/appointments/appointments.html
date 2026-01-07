@@ -1,0 +1,23 @@
+<div class="appointments-container">
+  <h2>Today's Appointments</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointments$ | async">
+        <td>{{ appointment.patientName }}</td>
+        <td>{{ appointment.age }}</td>
+        <td>{{ appointment.time }}</td>
+        <td>
+          <span class="status" [ngClass]="appointment.status.toLowerCase()">{{ appointment.status }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
